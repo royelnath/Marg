@@ -27,5 +27,5 @@
 
 1. **Clone the repository**:
    ```bash
-   git clone [https://github.com/your-username/Dikdarshan.git](https://github.com/your-username/Dikdarshan.git)
+   git clone [https://github.com/royelnath/Dikdarshan.git](https://github.com/royelnath/Dikdarshan.git)
    cd Dikdarshan
