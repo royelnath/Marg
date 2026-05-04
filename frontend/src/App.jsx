@@ -18,7 +18,7 @@ function App() {
             <Link to='/blog'>Our Blog</Link> 
             <Link to='/help'>Contact Us</Link>
           </div>
-          <div className='sign'><Link to='/sign'>Sign in</Link></div>
+          <div className='sign'><Link to='/sign'><span className='in'>Sign in</span></Link></div>
       </nav>
       
       <Routes>

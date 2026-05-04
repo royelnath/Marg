@@ -1,6 +1,11 @@
 *{
   margin: 0;
 }
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
 nav{
   color: #eef7f9;
   margin: 15px;
@@ -20,22 +25,33 @@ nav{
 body{
   background-color: #dbf1f6;
 }
-a{
+nav a{
   text-decoration: none;
   color: rgb(255, 254, 254);
 }
 
 .divert{
   display: flex;
-  gap: 20px;
+  gap: 30px;
+}
+
+.divert a{
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.divert a:hover{
+  color: #000;
+  background-color: #dbf1f6;
+  transition: all 0.5s;
 }
 
 .sign {
   font-size: 20px;
   background-color: #a5e1e1;            
-  padding: 10px 25px;        /* Slightly more horizontal padding for the pill shape */
-  border-radius: 10px;       /* High value creates the "pill" effect */
-  border: none;              /* Removes the outline from your previous style */
+  padding: 10px 25px;
+  border-radius: 10px;
+  border: none;
   font-family: sans-serif;   
   font-weight: bold;
   text-decoration: none;
@@ -44,4 +60,51 @@ a{
 }
 .sign a{
   color: #000;
+}
+
+.quote{
+  font-family:'Inter', sans-serif; ;
+  color: #2c4147;
+  font-weight: 700;
+  font-size: 90px;
+}
+
+.desc{
+  font-size: 30px;
+}
+
+.quote1{
+  margin: auto;
+}
+
+.Home{
+  display: flex;
+  gap: 30px;
+  margin-left: 50px;
+}
+
+.popular{
+  margin-top: 20px;
+  margin-left: 50px;
+}
+.popular p{
+  font-size: 25px;
+}
+
+.image1{
+  filter: drop-shadow(-10px -5px 0 #dbf1f6)
+          drop-shadow(-2px 0 20px #263d42);
+          /* drop-shadow(-2px 0 0 #263d42);  */
+          /* drop-shadow(0 -2px 0 #000); */
+}
+
+.options{
+  font-size: 30px;
+  display: flex;
+  gap: 5px;
+}
+.options span{
+  background-color: #a5e1e1;
+  padding: 20px;
+  align-content: center;
 }
