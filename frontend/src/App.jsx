@@ -5,6 +5,7 @@ import Careers from './pages/Careers';
 import Blog from './pages/Blog';
 import Sign from './pages/Sign';
 import './App.css';
+import Jobs from './pages/Jobs';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
             <Link to='/'>Home</Link> 
             <Link to='/career'>Careers</Link> 
             <Link to='/blog'>Our Blog</Link> 
+            <Link to='/job'>Jobs</Link> 
             <Link to='/help'>Contact Us</Link>
           </div>
           <div className='sign'><Link to='/sign'><span className='in'>Sign in</span></Link></div>
@@ -25,6 +27,7 @@ function App() {
         <Route path='/' element={<Home/>}/>
         <Route path='/career' element={<Careers/>}/>
         <Route path='/blog' element={<Blog/>}/>
+        <Route path='/job' element={<Jobs/>}/>
         <Route path='/help' element={<Help/>}/>
         <Route path='/sign' element={<Sign/>}/>
       </Routes>
