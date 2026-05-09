@@ -1,7 +1,86 @@
-export default function Careers(){
-    return(
-        <>
-        <h1>Careers</h1>
-        </>
-    )
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+// import './Careers.css'; // Make sure to import the CSS file
+
+export default function Careers() {
+  // Array of 8 specific careers for the small tabs
+  const careerTabs = [
+    { id: 'data-scientist', name: 'Data Scientist' },
+    { id: 'aerospace-engineer', name: 'Aerospace Engineer' },
+    { id: 'psychologist', name: 'Psychologist' },
+    { id: 'corporate-lawyer', name: 'Corporate Lawyer' },
+    { id: 'investment-banker', name: 'Investment Banker' },
+    { id: 'business-analyst', name: 'Business Analyst' },
+    { id: 'software-engineer', name: 'Software Engineer' },
+    { id: 'brand-strategist', name: 'Brand Strategist' },
+  ];
+
+  return (
+    <div className="careers-page-container">
+      {/* Search Bar */}
+      <div className="Searchbar">
+        <input type="text" placeholder="Search Career...." />
+        <button>
+          <FontAwesomeIcon className="magnifying" icon={faMagnifyingGlass} />
+        </button>
+      </div>
+
+      {/* Main Streams Section */}
+      <div className="section-header">
+        <h2>Explore Streams</h2>
+      </div>
+      
+      <div className="stream-grid">
+        {/* Science Card */}
+        <Link to="/science" className="stream-card">
+          <h1>Science</h1>
+          <h2>Innovate & Engineer</h2>
+          <p>
+            Dive into the mechanics of the future. From writing the algorithms that power modern technology to engineering sustainable solutions and advancing human health. This is the path for logical thinkers and relentless problem solvers.
+          </p>
+          <p className="excar">
+            <i>Career Trajectories:</i> Data Scientist, Aerospace Engineer, Medical Professional
+          </p>
+        </Link>
+
+        {/* Arts Card */}
+        <Link to="/arts" className="stream-card">
+          <h1>Arts</h1>
+          <h2>Create & Connect</h2>
+          <p>
+            Shape how the world thinks, feels, and interacts. Combine creative vision with a deep understanding of human behavior to solve complex problems through human-centric design, media, and social policy.
+          </p>
+          <p className="excar">
+            <i>Career Trajectories:</i> Psychologist, Corporate Lawyer, Brand Strategist
+          </p>
+        </Link>
+
+        {/* Commerce Card */}
+        <Link to="/commerce" className="stream-card">
+          <h1>Commerce</h1>
+          <h2>Strategize & Scale</h2>
+          <p>
+            Master the language of global business. Learn to analyze market trends, manage capital, and drive the strategic growth behind the world's most successful enterprises and disruptive startups.
+          </p>
+          <p className="excar">
+            <i>Career Trajectories:</i> Investment Banker, Financial Technologist (FinTech), Business Analyst, Chartered Accountant.
+          </p>
+        </Link>
+      </div>
+
+      {/* 8 Small Career Tabs Section */}
+      <div className="section-header">
+        <h2>Specific Careers</h2>
+      </div>
+
+      <div className="small-tabs-grid">
+        {careerTabs.map((career) => (
+          <Link to={`/career/${career.id}`} key={career.id} className="small-career-tab">
+            <h3>{career.name}</h3>
+          </Link>
+        ))}
+      </div>
+    </div>
+  );
 }
