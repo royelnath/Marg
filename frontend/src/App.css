@@ -1187,3 +1187,231 @@ nav a{
   }
 }
 /* About Us Ends */
+
+
+/* Sign in starts */
+/* Container to center the card on the page */
+.sign-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 2rem 5%;
+  background-color: #f4f9f9; /* Very light subtle background */
+  font-family: sans-serif;
+}
+
+/* The Main Card */
+.auth-card {
+  display: flex;
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 900px;
+  min-height: 500px;
+}
+
+/* Left Side: Branding Panel */
+.auth-branding {
+  flex: 1;
+  background-color: #004d40; /* Future Marg Dark Green */
+  color: white;
+  padding: 4rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.auth-branding h2 {
+  font-size: 2.5rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: #b2ebf2; /* Light teal accent */
+}
+
+.auth-branding p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+  color: #e0f2f1;
+}
+
+.toggle-mode-btn {
+  background-color: transparent;
+  color: white;
+  border: 2px solid #b2ebf2;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.toggle-mode-btn:hover {
+  background-color: #b2ebf2;
+  color: #004d40;
+}
+
+/* Right Side: Form Panel */
+.auth-form-section {
+  flex: 1.2;
+  padding: 4rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.auth-form-section h2 {
+  font-size: 2rem;
+  color: #222;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Input Styling */
+.input-group {
+  display: flex;
+  align-items: center;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 0 15px;
+  border: 1px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.input-group:focus-within {
+  border-color: #00796b;
+  background-color: white;
+}
+
+.input-icon {
+  color: #888;
+  font-size: 1.1rem;
+}
+
+.input-group input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 15px;
+  font-size: 1rem;
+  outline: none;
+  color: #333;
+}
+
+/* Forgot Password Link */
+.forgot-password {
+  text-align: right;
+  margin-top: -10px;
+}
+
+.forgot-password a {
+  color: #00796b;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
+}
+
+/* Primary Action Button */
+.auth-submit-btn {
+  background-color: #004d40;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.auth-submit-btn:hover {
+  background-color: #00332a;
+}
+
+.auth-submit-btn:active {
+  transform: scale(0.98);
+}
+
+/* Responsive Design for Mobile Devices */
+@media (max-width: 768px) {
+  .auth-card {
+    flex-direction: column;
+  }
+  
+  .auth-branding {
+    padding: 3rem 2rem;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .auth-form-section {
+    padding: 3rem 2rem;
+  }
+}
+/* --- Google Auth Button --- */
+.google-auth-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: white;
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  margin-bottom: 1.5rem;
+}
+
+.google-auth-btn:hover {
+  background-color: #f5f5f5;
+  border-color: #aaa;
+}
+
+.google-icon {
+  color: #DB4437; /* Standard Google Red */
+  font-size: 1.2rem;
+  margin-right: 10px;
+}
+
+/* --- OR Divider --- */
+.auth-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.auth-divider span {
+  padding: 0 10px;
+}
+/* Sign in Ends */
