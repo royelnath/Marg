@@ -1040,3 +1040,150 @@ nav a{
   }
 }
 /* Contact Ends */
+
+/* About Us starts */
+.about-page-container {
+  padding: 3rem 5%;
+  font-family: sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #1a1a1a;
+}
+
+/* Hero Section */
+.about-hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #004d40; /* Dark green theme */
+  color: white;
+  border-radius: 15px;
+  margin-bottom: 4rem;
+}
+
+.about-hero h1 {
+  font-size: 3.5rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  letter-spacing: -1px;
+}
+
+.about-hero p {
+  font-size: 1.25rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  color: #e0f2f1;
+}
+
+/* Story Section */
+.about-story-section {
+  background-color: #f8fcfc;
+  padding: 4rem;
+  border-radius: 15px;
+  border: 1px solid #e0e0e0;
+  margin-bottom: 5rem;
+}
+
+.story-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.story-content h2 {
+  font-size: 2.5rem;
+  color: #222;
+  margin-bottom: 1.5rem;
+  margin-top: 0;
+}
+
+.story-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+/* Team Section */
+.team-section {
+  text-align: center;
+}
+
+.team-section h2 {
+  font-size: 2.5rem;
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+
+.team-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 3rem;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.team-card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  border-color: #b2ebf2;
+}
+
+.team-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1.5rem;
+  border: 3px solid #b2ebf2;
+}
+
+.team-card h3 {
+  font-size: 1.25rem;
+  margin: 0 0 0.5rem 0;
+  color: #333;
+}
+
+.team-role {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #00796b;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.team-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #666;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-story-section {
+    padding: 2rem;
+  }
+  .about-hero h1 {
+    font-size: 2.5rem;
+  }
+}
+/* About Us Ends */

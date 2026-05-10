@@ -10,6 +10,7 @@ import Arts from './pages/Arts';
 import Commerce from './pages/Commerce';
 import CareerDetails from './pages/CareerDetails';
 import ContactUs from './pages/ContactUs';
+import AboutUs from './pages/AboutUs';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Link to='/'>Home</Link> 
             <Link to='/career'>Careers</Link> 
             <Link to='/blog'>Our Blog</Link> 
+            <Link to='/aboutus'>About Us</Link> 
             <Link to='/job'>Jobs</Link> 
             <Link to='/contactus'>Contact Us</Link>
           </div>
@@ -31,6 +33,7 @@ function App() {
         <Route path='/' element={<Home/>}/>
         <Route path='/career' element={<Careers/>}/>
         <Route path='/blog' element={<Blog/>}/>
+        <Route path='/aboutus' element={<AboutUs/>}/>
         <Route path='/job' element={<Jobs/>}/>
         <Route path='/contactus' element={<ContactUs/>}/>
         <Route path='/sign' element={<Sign/>}/>

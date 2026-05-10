@@ -1,0 +1,88 @@
+import Manjit from '../assets/Photos/Manjit.jpeg';
+import Suraj from '../assets/Photos/Suraj.jpeg';
+import Royel from '../assets/Photos/Royel.jpeg';
+import Manash from '../assets/Photos/Manash.jpeg';
+import Nabajyoti from '../assets/Photos/Nabajyoti.jpeg';
+
+export default function AboutUs() {
+  // Team Data
+  const teamMembers = [
+    {
+    id: 1,
+    name: "Royel Nath",
+    role: "Lead Full-Stack Developer",
+    bio: "Specializing in the MERN stack to architect scalable and intuitive digital solutions, Backend.",
+    image: Royel
+    },
+    {
+      id: 2,
+      name: "Manjit Kumar Das",
+      role: "UI/UX & Frontend",
+      bio: "Translating complex user journeys into clean, accessible interfaces.",
+      image: Manjit
+    },
+    {
+      id: 3,
+      name: "Suraj Saikia",
+      role: "UI/UX",
+      bio: "Focused on seamless frontend experiences.",
+      image: Suraj
+    },
+    {
+      id: 4,
+      name: "Manash Pratim Borah",
+      role: "Idea Partner",
+      bio: "providing design and logical Ideas.",
+      image: Manash
+    },
+    {
+      id: 5,
+      name: "Nabajyoti Bhuyan",
+      role: "Presentation/Pitch",
+      bio: "Handling Presentations and Pitching.",
+      image: Nabajyoti
+    }
+  ];
+
+  return (
+    <div className="about-page-container">
+      
+      {/* Hero Section */}
+      <div className="about-hero">
+        <h1>Charting the Course to Your Future</h1>
+        <p>At Future Marg, we believe that clarity precedes success. Our mission is to bridge the gap between academic potential and industry reality.</p>
+      </div>
+
+      {/* Origin Story Section */}
+      <div className="about-story-section">
+        <div className="story-content">
+          <h2>Our Story</h2>
+          <p>
+            Future Marg was born out of Dhemaji Engineering College by a group of engineering students who recognized a fundamental challenge: countless talented individuals struggle to find the exact career trajectory that matches their unique skills and ambitions.
+          </p>
+          <p>
+            By combining modern web technologies like the MERN stack with actionable industry insights, we set out to build a platform that doesn't just list jobs, but actively guides students toward their optimal professional paths. From mastering data structures to preparing for summer internships, we are building the roadmap we wish we had.
+          </p>
+        </div>
+      </div>
+
+      {/* Team Section */}
+      <div className="team-section">
+        <h2>Meet the Visionaries</h2>
+        <p className="team-subtitle">The engineering team behind Future Marg.</p>
+        
+        <div className="team-grid">
+          {teamMembers.map((member) => (
+            <div key={member.id} className="team-card">
+              <img src={member.image} alt={member.name} className="team-avatar" />
+              <h3>{member.name}</h3>
+              <span className="team-role">{member.role}</span>
+              <p>{member.bio}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  );
+}
