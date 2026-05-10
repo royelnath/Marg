@@ -1,10 +1,12 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // To redirect after login
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faLock, faUser } from '@fortawesome/free-solid-svg-icons';
 import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 
 export default function Sign() {
   const [isLogin, setIsLogin] = useState(true);
+  const navigate = useNavigate(); // Hook to change pages
 
   const [formData, setFormData] = useState({
     name: '',
@@ -17,25 +19,76 @@ export default function Sign() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    
     if (isLogin) {
-      console.log('Logging in with:', formData.email, formData.password);
-      // Add your standard Login API call here
+      // ==========================
+      // SIGN IN LOGIC
+      // ==========================
+      try {
+        const response = await fetch('http://localhost:5000/api/auth/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            email: formData.email,
+            password: formData.password,
+          }),
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+          // Save the token to local storage so the user stays logged in
+          localStorage.setItem('userToken', data.token);
+          localStorage.setItem('userName', data.name);
+          
+          alert(`Welcome back, ${data.name}!`);
+          navigate('/'); // Redirect to the Home page after successful login
+        } else {
+          alert("Login Failed: " + data.message);
+        }
+      } catch (error) {
+        alert("Server error. Ensure your backend is running.");
+      }
+
     } else {
+      // ==========================
+      // SIGN UP LOGIC
+      // ==========================
       if (formData.password !== formData.confirmPassword) {
         alert("Passwords do not match!");
         return;
       }
-      console.log('Registering with:', formData);
-      // Add your standard Registration API call here
+
+      try {
+        const response = await fetch('http://localhost:5000/api/auth/register', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: formData.name,
+            email: formData.email,
+            password: formData.password,
+          }),
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+          alert("Registration Successful! Please sign in.");
+          setIsLogin(true); // Flip back to the login screen
+          setFormData({ name: '', email: '', password: '', confirmPassword: '' });
+        } else {
+          alert("Registration Failed: " + data.message);
+        }
+      } catch (error) {
+        alert("Server error. Ensure your backend is running.");
+      }
     }
   };
 
-  // New handler for Google Sign In
   const handleGoogleSignIn = () => {
-    console.log('Initiating Google OAuth flow...');
-    // Later, you will integrate Firebase Auth or Google Identity Services here
+    alert("Google Auth will be implemented later via Firebase!");
   };
 
   return (
@@ -50,8 +103,12 @@ export default function Sign() {
               : 'Create an account to take our precision-based assessment and build a definitive roadmap for your future.'}
           </p>
           <button 
+            type="button"
             className="toggle-mode-btn" 
-            onClick={() => setIsLogin(!isLogin)}
+            onClick={() => {
+              setIsLogin(!isLogin);
+              setFormData({ name: '', email: '', password: '', confirmPassword: '' }); // Clear form on switch
+            }}
           >
             {isLogin ? "Create an Account" : "I already have an account"}
           </button>
@@ -60,7 +117,6 @@ export default function Sign() {
         <div className="auth-form-section">
           <h2>{isLogin ? 'Sign In' : 'Create Account'}</h2>
           
-          {/* --- NEW GOOGLE AUTH SECTION --- */}
           <button type="button" className="google-auth-btn" onClick={handleGoogleSignIn}>
             <FontAwesomeIcon icon={faGoogle} className="google-icon" />
             Continue with Google
@@ -69,7 +125,6 @@ export default function Sign() {
           <div className="auth-divider">
             <span>or continue with email</span>
           </div>
-          {/* ------------------------------- */}
 
           <form onSubmit={handleSubmit} className="auth-form">
             
