@@ -1,0 +1,71 @@
+import { useState } from 'react';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircleUser, faCaretDown, faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
+
+export default function Navbar() {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  // 1. Read directly from browser storage
+  const userName = localStorage.getItem('userName');
+  
+  // 2. State for the dropdown
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  // 3. State to remember the last URL we were on
+  const [prevLocation, setPrevLocation] = useState(location.pathname);
+
+  // 4. THE REACT 18 WAY: If the URL changed, close the dropdown and update the tracker immediately!
+  if (location.pathname !== prevLocation) {
+    setPrevLocation(location.pathname);
+    setIsDropdownOpen(false);
+  }
+
+  const handleLogout = () => {
+    localStorage.removeItem('userToken');
+    localStorage.removeItem('userName');
+    setIsDropdownOpen(false);
+    navigate('/');
+  };
+
+  return (
+    <nav>
+      <div className='logo'>Marg.</div>
+      
+      <div className='divert'>
+        <Link to='/'>Home</Link>
+        <Link to='/career'>Careers</Link>
+        <Link to='/blog'>Our Blog</Link>
+        <Link to='/aboutus'>About Us</Link>
+        <Link to='/job'>Jobs</Link>
+        <Link to='/contactus'>Contact Us</Link>
+      </div>
+
+      <div className='sign'>
+        {userName ? (
+          <div className="user-profile-container">
+            <button 
+              className="profile-btn" 
+              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+            >
+              <FontAwesomeIcon icon={faCircleUser} className="profile-icon" />
+              <span className="profile-name">{userName}</span>
+              <FontAwesomeIcon icon={faCaretDown} className="caret-icon" />
+            </button>
+
+            {isDropdownOpen && (
+              <div className="profile-dropdown">
+                <button onClick={handleLogout} className="dropdown-item logout-btn">
+                  <FontAwesomeIcon icon={faRightFromBracket} /> Logout
+                </button>
+              </div>
+            )}
+          </div>
+        ) : (
+          <Link to='/sign'><span className='in'>Sign in</span></Link>
+        )}
+      </div>
+    </nav>
+  );
+}

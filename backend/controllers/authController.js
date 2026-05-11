@@ -72,4 +72,40 @@ const loginUser = async (req, res) => {
 };
 
 // Make sure BOTH functions are exported here at the bottom!
-module.exports = { registerUser, loginUser };
+// @desc    Authenticate with Google
+// @route   POST /api/auth/google
+const googleAuth = async (req, res) => {
+  try {
+    const { name, email } = req.body;
+
+    // 1. Check if this user already exists in our MongoDB
+    let user = await User.findOne({ email });
+
+    // 2. If they don't exist, create a new account for them instantly
+    if (!user) {
+      // Create a random, highly secure password since they use Google to log in
+      const generatedPassword = Math.random().toString(36).slice(-8) + Math.random().toString(36).slice(-8);
+      const salt = await bcrypt.genSalt(10);
+      const hashedPassword = await bcrypt.hash(generatedPassword, salt);
+
+      user = await User.create({
+        name,
+        email,
+        password: hashedPassword,
+      });
+    }
+
+    // 3. Send back the standard JWT token so the Navbar works
+    res.json({
+      _id: user.id,
+      name: user.name,
+      email: user.email,
+      token: generateToken(user._id),
+      message: "Google Authentication successful!"
+    });
+
+  } catch (error) {
+    res.status(500).json({ message: 'Server Error', error: error.message });
+  }
+};
+module.exports = { registerUser, loginUser, googleAuth };

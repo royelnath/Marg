@@ -1,4 +1,4 @@
-import {BrowserRouter, Routes, Route, Link} from 'react-router-dom';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Home from './pages/Home';
 import Careers from './pages/Careers';
 import Blog from './pages/Blog';
@@ -11,30 +11,25 @@ import Commerce from './pages/Commerce';
 import CareerDetails from './pages/CareerDetails';
 import ContactUs from './pages/ContactUs';
 import AboutUs from './pages/AboutUs';
+import Navbar from './components/Navbar';
+import ProtectedRoute from './components/ProtectedRoute';
 
 function App() {
   return (
     <>
     <BrowserRouter>
-      <nav>
-          <div className='logo'>Marg.</div>
-          <div className='divert'>
-            <Link to='/'>Home</Link> 
-            <Link to='/career'>Careers</Link> 
-            <Link to='/blog'>Our Blog</Link> 
-            <Link to='/aboutus'>About Us</Link> 
-            <Link to='/job'>Jobs</Link> 
-            <Link to='/contactus'>Contact Us</Link>
-          </div>
-          <div className='sign'><Link to='/sign'><span className='in'>Sign in</span></Link></div>
-      </nav>
-      
+      <Navbar/>
+    
       <Routes>
         <Route path='/' element={<Home/>}/>
-        <Route path='/career' element={<Careers/>}/>
+        {/* <Route path='/career' element={<Careers/>}/> */}
+        <Route path='/career' element={<ProtectedRoute message="Sign in to view Career roadmaps."><Careers/>
+        </ProtectedRoute> } />
+        <Route path='/career/:careerId' element={<ProtectedRoute><CareerDetails/></ProtectedRoute>} />
+        <Route path='/job' element={ <ProtectedRoute message="Sign in to view Jobs."> <Jobs /> </ProtectedRoute> } />
         <Route path='/blog' element={<Blog/>}/>
         <Route path='/aboutus' element={<AboutUs/>}/>
-        <Route path='/job' element={<Jobs/>}/>
+        {/* <Route path='/job' element={<Jobs/>}/> */}
         <Route path='/contactus' element={<ContactUs/>}/>
         <Route path='/sign' element={<Sign/>}/>
         <Route path="/science" element={<Science/>} />

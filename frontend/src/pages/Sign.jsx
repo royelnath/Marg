@@ -1,12 +1,16 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // To redirect after login
+import { useNavigate, useLocation } from 'react-router-dom'; // To redirect after login
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faLock, faUser } from '@fortawesome/free-solid-svg-icons';
 import { faGoogle } from '@fortawesome/free-brands-svg-icons';
+import { auth } from '../firebase';
+import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 
 export default function Sign() {
   const [isLogin, setIsLogin] = useState(true);
-  const navigate = useNavigate(); // Hook to change pages
+  const navigate = useNavigate(); 
+  const location = useLocation();
+  const redirectMessage = location.state?.redirectMessage;
 
   const [formData, setFormData] = useState({
     name: '',
@@ -48,7 +52,7 @@ export default function Sign() {
         } else {
           alert("Login Failed: " + data.message);
         }
-      } catch (error) {
+      } catch {
         alert("Server error. Ensure your backend is running.");
       }
 
@@ -81,14 +85,43 @@ export default function Sign() {
         } else {
           alert("Registration Failed: " + data.message);
         }
-      } catch (error) {
+      } catch {
         alert("Server error. Ensure your backend is running.");
       }
     }
   };
 
-  const handleGoogleSignIn = () => {
-    alert("Google Auth will be implemented later via Firebase!");
+  const handleGoogleSignIn = async () => {
+    try {
+      const provider = new GoogleAuthProvider();
+      // This pops up the Google login window
+      const result = await signInWithPopup(auth, provider);
+      
+      // Send the Google user data to our MongoDB backend
+      const response = await fetch('http://localhost:5000/api/auth/google', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: result.user.displayName,
+          email: result.user.email,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        // Log them in using our custom JWT system just like normal!
+        localStorage.setItem('userToken', data.token);
+        localStorage.setItem('userName', data.name);
+        alert(`Welcome, ${data.name}!`);
+        navigate('/'); 
+      } else {
+        alert("Google Login Failed: " + data.message);
+      }
+    } catch (error) {
+      console.error("Firebase Error:", error);
+      alert("Could not complete Google Sign In.");
+    }
   };
 
   return (
@@ -96,6 +129,11 @@ export default function Sign() {
       <div className="auth-card">
         
         <div className="auth-branding">
+          {redirectMessage && (
+            <div className="redirect-alert">
+              {redirectMessage}
+            </div>
+          )}
           <h2>{isLogin ? 'Welcome Back!' : 'Join Future Marg'}</h2>
           <p>
             {isLogin 
