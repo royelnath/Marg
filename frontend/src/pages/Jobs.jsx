@@ -18,7 +18,8 @@ export default function Jobs() {
       type: "Internship",
       salary: "₹30,000 / month",
       posted: "2 days ago",
-      tags: ["React", "Node.js", "MongoDB"]
+      tags: ["React", "Node.js", "MongoDB"],
+      applyLink: "https://manishdas2071.github.io/Coming-Soon/" 
     },
     {
       id: 2,
@@ -28,7 +29,8 @@ export default function Jobs() {
       type: "Remote",
       salary: "₹8,00,000 / year",
       posted: "5 days ago",
-      tags: ["Python", "Machine Learning", "SQL"]
+      tags: ["Python", "Machine Learning", "SQL"],
+      applyLink: "https://manishdas2071.github.io/Coming-Soon/" 
     },
     {
       id: 3,
@@ -38,7 +40,8 @@ export default function Jobs() {
       type: "Full-Time",
       salary: "₹6,50,000 / year",
       posted: "1 week ago",
-      tags: ["Contract Law", "Corporate Governance"]
+      tags: ["Contract Law", "Corporate Governance"],
+      applyLink: "https://manishdas2071.github.io/Coming-Soon/" 
     },
     {
       id: 4,
@@ -48,7 +51,8 @@ export default function Jobs() {
       type: "Full-Time",
       salary: "₹12,00,000 / year",
       posted: "Just now",
-      tags: ["Financial Modeling", "Valuation", "Excel"]
+      tags: ["Financial Modeling", "Valuation", "Excel"],
+      applyLink: "https://manishdas2071.github.io/Coming-Soon/" 
     },
     {
       id: 5,
@@ -58,7 +62,8 @@ export default function Jobs() {
       type: "Internship",
       salary: "Stipend Provided",
       posted: "3 days ago",
-      tags: ["System Control", "Automation", "Research"]
+      tags: ["System Control", "Automation", "Research"],
+      applyLink: "https://manishdas2071.github.io/Coming-Soon/" 
     }
   ];
 
@@ -132,7 +137,13 @@ export default function Jobs() {
                     <span key={index} className="tag">{tag}</span>
                   ))}
                 </div>
-                <button className="apply-btn">Apply Now</button>
+                {/* NEW: Added onClick to open the job's specific link in a new tab */}
+                <button 
+                  className="apply-btn" 
+                  onClick={() => window.open(job.applyLink, '_blank')}
+                >
+                  Apply Now
+                </button>
               </div>
             </div>
           ))
