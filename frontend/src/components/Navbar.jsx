@@ -36,7 +36,7 @@ export default function Navbar() {
       <div className='divert'>
         <Link to='/'>Home</Link>
         <Link to='/career'>Careers</Link>
-        <Link to='/blog'>Our Blog</Link>
+        {/* <Link to='/blog'>Our Blog</Link> */}
         <Link to='/aboutus'>About Us</Link>
         <Link to='/job'>Jobs</Link>
         <Link to='/contactus'>Contact Us</Link>

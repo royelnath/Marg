@@ -50,7 +50,7 @@ export default function ContactUs() {
             <FontAwesomeIcon icon={faEnvelope} className="contact-icon" />
             <div>
               <h3>Email</h3>
-              <p>support@futuremarg.com</p>
+              <p>support@marg.com</p>
             </div>
           </div>
 
@@ -58,7 +58,7 @@ export default function ContactUs() {
             <FontAwesomeIcon icon={faLocationDot} className="contact-icon" />
             <div>
               <h3>Office</h3>
-              <p>Dhemaji, Assam, India</p>
+              <p>Assam, India</p>
             </div>
           </div>
         </div>

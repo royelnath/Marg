@@ -1505,3 +1505,130 @@ nav a{
   background-color: #ffebee;
 }
 /* Nav Ends */
+
+
+
+/* Footer starts */
+.footer-container {
+  background-color: #162421; /* Deep, dark green/charcoal */
+  color: #e0f2f1;
+  padding: 2rem 1rem 0; /* Plenty of space at the top */
+  margin-top: 4rem; /* Pushes it down from your main content */
+  font-family: inherit;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 20px;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Brand Section */
+.footer-logo {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.footer-tagline {
+  line-height: 1.6;
+  color: #b2dfdb;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  max-width: 80%;
+}
+
+.social-links {
+  display: flex;
+  gap: 7px;
+}
+
+.social-links a {
+  color: #b2dfdb;
+  font-size: 25px;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.social-links a:hover {
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Headings */
+.footer-section h3 {
+  color: #ffffff;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer-section h3::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40px;
+  height: 2px;
+  background-color: #4db6ac; /* Accent green */
+}
+
+/* Lists */
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section li {
+  margin-bottom: 6px;
+  display: flex;
+}
+
+.links-section a, 
+.contact-section a, 
+.contact-section span {
+  color: #b2dfdb;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+  display: flex;
+  align-items: end;
+}
+
+.links-section a:hover, 
+.contact-section a:hover {
+  color: #ffffff;
+}
+
+.contact-icon {
+  margin-right: 10px;
+  color: #4db6ac;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.85rem;
+  color: #80cbc4;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .footer-tagline {
+    max-width: 100%;
+  }
+}
+
+/* Footer Ends */

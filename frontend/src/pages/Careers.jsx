@@ -1,10 +1,11 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
-// import './Careers.css'; // Make sure to import the CSS file
 
 export default function Careers() {
-  // Array of 8 specific careers for the small tabs
+  const [searchTerm, setSearchTerm] = useState('');
+
   const careerTabs = [
     { id: 'data-scientist', name: 'Data Scientist' },
     { id: 'aerospace-engineer', name: 'Aerospace Engineer' },
@@ -16,23 +17,52 @@ export default function Careers() {
     { id: 'brand-strategist', name: 'Brand Strategist' },
   ];
 
+  // Only filter if the user has actually typed something
+  const filteredCareers = searchTerm 
+    ? careerTabs.filter((career) => career.name.toLowerCase().includes(searchTerm.toLowerCase()))
+    : [];
+
   return (
     <div className="careers-page-container">
+      
       {/* Search Bar */}
       <div className="Searchbar">
-        <input type="text" placeholder="Search Career...." />
+        <input 
+          type="text" 
+          placeholder="Search Career...." 
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
         <button>
           <FontAwesomeIcon className="magnifying" icon={faMagnifyingGlass} />
         </button>
       </div>
 
-      {/* Main Streams Section */}
+      {/* --- NEW: SEARCH RESULTS SHOW RIGHT BELOW THE SEARCH BAR --- */}
+      {searchTerm && (
+        <div style={{ marginBottom: '2rem', padding: '1rem', backgroundColor: '#f9f9f9', borderRadius: '10px' }}>
+          <h3 style={{ marginBottom: '1rem', color: '#004d40' }}>Search Results for "{searchTerm}"</h3>
+          <div className="small-tabs-grid">
+            {filteredCareers.length > 0 ? (
+              filteredCareers.map((career) => (
+                <Link to={`/career/${career.id}`} key={`search-${career.id}`} className="small-career-tab">
+                  <h3>{career.name}</h3>
+                </Link>
+              ))
+            ) : (
+              <p style={{ gridColumn: '1 / -1', color: '#666' }}>No careers found matching your search.</p>
+            )}
+          </div>
+        </div>
+      )}
+      {/* ----------------------------------------------------------- */}
+
+      {/* Main Streams Section (Same as previous) */}
       <div className="section-header">
         <h2>Explore Streams</h2>
       </div>
       
       <div className="stream-grid">
-        {/* Science Card */}
         <Link to="/science" className="stream-card">
           <h1>Science</h1>
           <h2>Innovate & Engineer</h2>
@@ -44,7 +74,6 @@ export default function Careers() {
           </p>
         </Link>
 
-        {/* Arts Card */}
         <Link to="/arts" className="stream-card">
           <h1>Arts</h1>
           <h2>Create & Connect</h2>
@@ -56,7 +85,6 @@ export default function Careers() {
           </p>
         </Link>
 
-        {/* Commerce Card */}
         <Link to="/commerce" className="stream-card">
           <h1>Commerce</h1>
           <h2>Strategize & Scale</h2>
@@ -69,18 +97,20 @@ export default function Careers() {
         </Link>
       </div>
 
-      {/* 8 Small Career Tabs Section */}
+      {/* 8 Small Career Tabs Section (Restored to original) */}
       <div className="section-header">
         <h2>Specific Careers</h2>
       </div>
 
       <div className="small-tabs-grid">
+        {/* We map over the original array so it always shows the 8 tabs */}
         {careerTabs.map((career) => (
           <Link to={`/career/${career.id}`} key={career.id} className="small-career-tab">
             <h3>{career.name}</h3>
           </Link>
         ))}
       </div>
+      
     </div>
   );
 }

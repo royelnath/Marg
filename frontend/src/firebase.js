@@ -2,14 +2,13 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
-// PASTE YOUR UNIQUE CONFIG HERE FROM THE FIREBASE CONSOLE
 const firebaseConfig = {
-  apiKey: "AIzaSyDKsNWxU5geuFDlZOe46qImNfkTa_7Skns",
-  authDomain: "future-marg.firebaseapp.com",
-  projectId: "future-marg",
-  storageBucket: "future-marg.firebasestorage.app",
-  messagingSenderId: "70249093862",
-  appId: "1:70249093862:web:58b4000961570a8e7e3927"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID
 };
 
 // Initialize Firebase

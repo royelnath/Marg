@@ -13,6 +13,7 @@ import ContactUs from './pages/ContactUs';
 import AboutUs from './pages/AboutUs';
 import Navbar from './components/Navbar';
 import ProtectedRoute from './components/ProtectedRoute';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
         <Route path="/commerce" element={<Commerce/>} />
         <Route path="/career/:careerId" element={<CareerDetails/>} />
       </Routes>
+      <Footer/>
     </BrowserRouter>
     </>
   )

@@ -8,18 +8,18 @@ export default function AboutUs() {
   // Team Data
   const teamMembers = [
     {
-    id: 1,
-    name: "Royel Nath",
-    role: "Lead Full-Stack Developer",
-    bio: "Specializing in the MERN stack to architect scalable and intuitive digital solutions, Backend.",
-    image: Royel
-    },
-    {
-      id: 2,
+      id: 1,
       name: "Manjit Kumar Das",
-      role: "UI/UX & Frontend",
+      role: "UI/UX, Frontend & backend",
       bio: "Translating complex user journeys into clean, accessible interfaces.",
       image: Manjit
+    },
+    {
+    id: 2,
+    name: "Royel Nath",
+    role: "Backend & Database",
+    bio: "Specializing in the MERN stack to architect scalable and intuitive digital solutions, Backend.",
+    image: Royel
     },
     {
       id: 3,
@@ -50,7 +50,7 @@ export default function AboutUs() {
       {/* Hero Section */}
       <div className="about-hero">
         <h1>Charting the Course to Your Future</h1>
-        <p>At Future Marg, we believe that clarity precedes success. Our mission is to bridge the gap between academic potential and industry reality.</p>
+        <p>At Marg, we believe that clarity precedes success. Our mission is to bridge the gap between academic potential and industry reality.</p>
       </div>
 
       {/* Origin Story Section */}
@@ -58,7 +58,7 @@ export default function AboutUs() {
         <div className="story-content">
           <h2>Our Story</h2>
           <p>
-            Future Marg was born out of Dhemaji Engineering College by a group of engineering students who recognized a fundamental challenge: countless talented individuals struggle to find the exact career trajectory that matches their unique skills and ambitions.
+            Marg was born out of Dhemaji Engineering College by a group of engineering students who recognized a fundamental challenge: countless talented individuals struggle to find the exact career trajectory that matches their unique skills and ambitions.
           </p>
           <p>
             By combining modern web technologies like the MERN stack with actionable industry insights, we set out to build a platform that doesn't just list jobs, but actively guides students toward their optimal professional paths. From mastering data structures to preparing for summer internships, we are building the roadmap we wish we had.
