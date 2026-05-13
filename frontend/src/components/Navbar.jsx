@@ -7,16 +7,12 @@ export default function Navbar() {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // 1. Read directly from browser storage
   const userName = localStorage.getItem('userName');
   
-  // 2. State for the dropdown
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-  // 3. State to remember the last URL we were on
   const [prevLocation, setPrevLocation] = useState(location.pathname);
 
-  // 4. THE REACT 18 WAY: If the URL changed, close the dropdown and update the tracker immediately!
   if (location.pathname !== prevLocation) {
     setPrevLocation(location.pathname);
     setIsDropdownOpen(false);

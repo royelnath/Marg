@@ -4,7 +4,6 @@ export default function Commerce() {
   const commerceCareers = [
     { id: 'investment-banker', title: 'Investment Banker', desc: 'Raise capital for corporations and governments while advising on major financial transactions.' },
     { id: 'business-analyst', title: 'Business Analyst', desc: 'Bridge the gap between IT and business operations to optimize workflows and scale enterprises.' },
-    // If you want to add a Chartered Accountant later, just add it to the CareerDetails.jsx database and here!
   ];
 
   return (

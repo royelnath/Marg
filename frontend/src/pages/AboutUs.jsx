@@ -5,7 +5,6 @@ import Manash from '../assets/Photos/Manash.jpeg';
 import Nabajyoti from '../assets/Photos/Nabajyoti.jpeg';
 
 export default function AboutUs() {
-  // Team Data
   const teamMembers = [
     {
       id: 1,
@@ -47,13 +46,11 @@ export default function AboutUs() {
   return (
     <div className="about-page-container">
       
-      {/* Hero Section */}
       <div className="about-hero">
         <h1>Charting the Course to Your Future</h1>
         <p>At Marg, we believe that clarity precedes success. Our mission is to bridge the gap between academic potential and industry reality.</p>
       </div>
 
-      {/* Origin Story Section */}
       <div className="about-story-section">
         <div className="story-content">
           <h2>Our Story</h2>
@@ -66,7 +63,6 @@ export default function AboutUs() {
         </div>
       </div>
 
-      {/* Team Section */}
       <div className="team-section">
         <h2>Meet the Visionaries</h2>
         <p className="team-subtitle">The engineering team behind Future Marg.</p>

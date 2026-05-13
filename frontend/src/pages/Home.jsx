@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'; // Import Link for internal routing
+import { Link } from 'react-router-dom';
 import image1 from '../assets/Home.png';
 import engineer from '../assets/enginee logo.png';
 import doctor from '../assets/doctor logo.png';
@@ -24,9 +24,7 @@ export default function Home() {
       <div className="popular">
         <p>Popular Careers</p>
         <div className="options">
-          {/* Replaced <a> tags with <Link> components. 
-            The 'to' prop points to the dynamic URLs configured in App.jsx 
-          */}
+          
           <span>
             <Link to="/career/software-engineer">
               <img src={engineer} alt="Engineer" width="50px" /> Engineer

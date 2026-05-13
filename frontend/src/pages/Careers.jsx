@@ -17,7 +17,7 @@ export default function Careers() {
     { id: 'brand-strategist', name: 'Brand Strategist' },
   ];
 
-  // Only filter if the user has actually typed something
+
   const filteredCareers = searchTerm 
     ? careerTabs.filter((career) => career.name.toLowerCase().includes(searchTerm.toLowerCase()))
     : [];
@@ -25,7 +25,6 @@ export default function Careers() {
   return (
     <div className="careers-page-container">
       
-      {/* Search Bar */}
       <div className="Searchbar">
         <input 
           type="text" 
@@ -38,7 +37,6 @@ export default function Careers() {
         </button>
       </div>
 
-      {/* --- NEW: SEARCH RESULTS SHOW RIGHT BELOW THE SEARCH BAR --- */}
       {searchTerm && (
         <div style={{ marginBottom: '2rem', padding: '1rem', backgroundColor: '#f9f9f9', borderRadius: '10px' }}>
           <h3 style={{ marginBottom: '1rem', color: '#004d40' }}>Search Results for "{searchTerm}"</h3>
@@ -55,9 +53,9 @@ export default function Careers() {
           </div>
         </div>
       )}
-      {/* ----------------------------------------------------------- */}
+      
 
-      {/* Main Streams Section (Same as previous) */}
+      
       <div className="section-header">
         <h2>Explore Streams</h2>
       </div>
@@ -97,13 +95,12 @@ export default function Careers() {
         </Link>
       </div>
 
-      {/* 8 Small Career Tabs Section (Restored to original) */}
+      
       <div className="section-header">
         <h2>Specific Careers</h2>
       </div>
 
       <div className="small-tabs-grid">
-        {/* We map over the original array so it always shows the 8 tabs */}
         {careerTabs.map((career) => (
           <Link to={`/career/${career.id}`} key={career.id} className="small-career-tab">
             <h3>{career.name}</h3>

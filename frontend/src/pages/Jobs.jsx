@@ -8,7 +8,6 @@ export default function Jobs() {
 
   const jobFilters = ['All', 'Internship', 'Full-Time', 'Remote'];
 
-  // Mock Database for Job Listings
   const jobListings = [
     {
       id: 1,
@@ -67,7 +66,6 @@ export default function Jobs() {
     }
   ];
 
-  // Logic to filter jobs based on search term and selected tab
   const filteredJobs = jobListings.filter(job => {
     const matchesSearch = job.title.toLowerCase().includes(searchTerm.toLowerCase()) || 
                           job.company.toLowerCase().includes(searchTerm.toLowerCase());
@@ -79,13 +77,11 @@ export default function Jobs() {
   return (
     <div className="jobs-page-container">
       
-      {/* Page Header */}
       <div className="jobs-header">
         <h1>Career Opportunities</h1>
         <p>Discover internships and full-time roles tailored to your skillset and career trajectory.</p>
       </div>
 
-      {/* Search and Filter Section */}
       <div className="jobs-controls">
         <div className="jobs-searchbar">
           <input 
@@ -112,7 +108,6 @@ export default function Jobs() {
         </div>
       </div>
 
-      {/* Job Listings List */}
       <div className="job-listings-wrapper">
         {filteredJobs.length > 0 ? (
           filteredJobs.map(job => (
@@ -137,7 +132,6 @@ export default function Jobs() {
                     <span key={index} className="tag">{tag}</span>
                   ))}
                 </div>
-                {/* NEW: Added onClick to open the job's specific link in a new tab */}
                 <button 
                   className="apply-btn" 
                   onClick={() => window.open(job.applyLink, '_blank')}

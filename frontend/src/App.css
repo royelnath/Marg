@@ -123,7 +123,7 @@ nav a{
 }
 
 .redirect-alert {
-  background-color: #e0f2f1; /* Light green to match your theme */
+  background-color: #e0f2f1;
   color: #004d40;
   padding: 12px 20px;
   border-radius: 8px;
@@ -138,13 +138,11 @@ nav a{
 
 /* Career */
 
-/* Container for the whole page to add padding */
 .careers-page-container {
   padding: 2rem 5%;
   font-family: sans-serif;
 }
 
-/* Searchbar Styling (Adjusted to center and look clean) */
 .Searchbar {
   display: flex;
   justify-content: center;
@@ -175,7 +173,6 @@ nav a{
   color: #333;
 }
 
-/* Main Streams Grid */
 .stream-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -183,12 +180,11 @@ nav a{
   margin-bottom: 4rem;
 }
 
-/* Stream Card Styling */
 .stream-card {
-  background-color: #b2ebf2; /* Matching your current UI color */
+  background-color: #b2ebf2;
   padding: 2rem;
   border-radius: 15px;
-  text-decoration: none; /* Removes the underline from links */
+  text-decoration: none;
   color: #1a1a1a;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
@@ -214,7 +210,7 @@ nav a{
 
 .stream-card p {
   line-height: 1.6;
-  flex-grow: 1; /* Pushes the 'excar' paragraph to the bottom */
+  flex-grow: 1;
 }
 
 .stream-card .excar {
@@ -222,14 +218,12 @@ nav a{
   font-size: 0.9rem;
 }
 
-/* Small Tabs Grid (8 items) */
 .small-tabs-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.5rem;
 }
 
-/* Small Career Tab Styling */
 .small-career-tab {
   background-color: #e0f7fa;
   padding: 1.5rem;
@@ -256,7 +250,6 @@ nav a{
 /* Career End */
 
 /* Career Details Start*/
-/* Container Padding */
 .career-details-container {
   padding: 3rem 5%;
   font-family: sans-serif;
@@ -265,7 +258,6 @@ nav a{
   margin: 0 auto;
 }
 
-/* Breadcrumb / Back button */
 .breadcrumb {
   margin-bottom: 2rem;
 }
@@ -281,7 +273,6 @@ nav a{
   color: #000;
 }
 
-/* Header Section */
 .career-header {
   margin-bottom: 3rem;
   padding-bottom: 1rem;
@@ -295,7 +286,6 @@ nav a{
   color: #222;
 }
 
-/* Dynamic Stream Badges */
 .stream-badge {
   padding: 5px 12px;
   border-radius: 20px;
@@ -309,14 +299,12 @@ nav a{
 .stream-badge.arts { background-color: #fce4ec; color: #c2185b; }
 .stream-badge.commerce { background-color: #e8f5e9; color: #2e7d32; }
 
-/* Grid Layout for Content */
 .career-content-grid {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 3rem;
 }
 
-/* Typography for main content */
 .main-info h2, .sidebar-info h2 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
@@ -330,7 +318,6 @@ nav a{
   margin-bottom: 2rem;
 }
 
-/* Skills Section Styling */
 .skills-container {
   display: flex;
   flex-wrap: wrap;
@@ -338,7 +325,7 @@ nav a{
 }
 
 .skill-pill {
-  background-color: #b2ebf2; /* Matching your theme color */
+  background-color: #b2ebf2;
   color: #004d40;
   padding: 8px 16px;
   border-radius: 25px;
@@ -346,7 +333,6 @@ nav a{
   font-weight: 500;
 }
 
-/* Error State Styling */
 .career-not-found {
   text-align: center;
   padding: 5rem 0;
@@ -386,7 +372,6 @@ nav a{
   margin: 0 auto;
 }
 
-/* Hero Section */
 .stream-hero {
   text-align: center;
   padding: 4rem 2rem;
@@ -395,10 +380,9 @@ nav a{
   color: #1a1a1a;
 }
 
-/* Specific Backgrounds for each stream */
-.stream-hero.science-bg { background-color: #e0f2f1; } /* Light Teal */
-.stream-hero.arts-bg { background-color: #fce4ec; }    /* Light Pink */
-.stream-hero.commerce-bg { background-color: #e8f5e9; } /* Light Green */
+.stream-hero.science-bg { background-color: #e0f2f1; }
+.stream-hero.arts-bg { background-color: #fce4ec; }
+.stream-hero.commerce-bg { background-color: #e8f5e9; }
 
 .stream-hero h1 {
   font-size: 3.5rem;
@@ -415,7 +399,6 @@ nav a{
   color: #444;
 }
 
-/* Careers Grid */
 .section-title {
   font-size: 2rem;
   margin-bottom: 2rem;
@@ -429,7 +412,6 @@ nav a{
   gap: 2rem;
 }
 
-/* Individual Career Card */
 .career-card {
   background: white;
   border: 1px solid #e0e0e0;
@@ -485,7 +467,6 @@ nav a{
   color: #1a1a1a;
 }
 
-/* Header */
 .blog-header {
   text-align: center;
   margin-bottom: 3rem;
@@ -504,7 +485,6 @@ nav a{
   margin: 0 auto;
 }
 
-/* Filters */
 .blog-filters {
   display: flex;
   justify-content: center;
@@ -530,7 +510,6 @@ nav a{
   color: #004d40;
 }
 
-/* Featured Post */
 .featured-post {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
@@ -579,7 +558,6 @@ nav a{
   background-color: #00332a;
 }
 
-/* Blog Grid */
 .blog-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -652,7 +630,6 @@ nav a{
   text-decoration: underline;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .featured-post {
     grid-template-columns: 1fr;
@@ -671,12 +648,11 @@ nav a{
 .jobs-page-container {
   padding: 3rem 5%;
   font-family: sans-serif;
-  max-width: 1000px; /* Slightly narrower than blog for list readability */
+  max-width: 1000px;
   margin: 0 auto;
   color: #1a1a1a;
 }
 
-/* Header */
 .jobs-header {
   text-align: center;
   margin-bottom: 3rem;
@@ -693,7 +669,6 @@ nav a{
   color: #555;
 }
 
-/* Controls: Search and Filters */
 .jobs-controls {
   display: flex;
   flex-direction: column;
@@ -740,7 +715,6 @@ nav a{
   background-color: #00332a;
 }
 
-/* Filter Tabs */
 .jobs-filter-tabs {
   display: flex;
   gap: 10px;
@@ -764,7 +738,6 @@ nav a{
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-/* Job Listings */
 .job-listings-wrapper {
   display: flex;
   flex-direction: column;
@@ -805,7 +778,6 @@ nav a{
   font-weight: 500;
 }
 
-/* Type Badges */
 .job-type-badge {
   padding: 5px 12px;
   border-radius: 15px;
@@ -817,7 +789,6 @@ nav a{
 .job-type-badge.full-time { background-color: #e8f5e9; color: #2e7d32; }
 .job-type-badge.remote { background-color: #fff3e0; color: #e65100; }
 
-/* Details Section */
 .job-card-details {
   display: flex;
   gap: 2rem;
@@ -838,7 +809,6 @@ nav a{
   font-size: 0.85rem;
 }
 
-/* Footer Section */
 .job-card-footer {
   display: flex;
   justify-content: space-between;
@@ -876,7 +846,6 @@ nav a{
   background-color: #00332a;
 }
 
-/* Empty State */
 .no-jobs-found {
   text-align: center;
   padding: 4rem 0;
@@ -898,7 +867,6 @@ nav a{
   color: #1a1a1a;
 }
 
-/* Header */
 .contact-header {
   text-align: center;
   margin-bottom: 4rem;
@@ -917,7 +885,6 @@ nav a{
   margin: 0 auto;
 }
 
-/* Main Grid Layout */
 .contact-content-grid {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
@@ -929,9 +896,8 @@ nav a{
   border: 1px solid #e0e0e0;
 }
 
-/* Left Side: Info Section */
 .contact-info-section {
-  background-color: #004d40; /* Dark green theme color */
+  background-color: #004d40;
   color: white;
   padding: 3rem 2rem;
   display: flex;
@@ -945,7 +911,7 @@ nav a{
 }
 
 .contact-info-section > p {
-  color: #b2ebf2; /* Light teal contrast */
+  color: #b2ebf2;
   margin-bottom: 3rem;
   line-height: 1.6;
 }
@@ -975,7 +941,6 @@ nav a{
   font-size: 0.95rem;
 }
 
-/* Right Side: Form Section */
 .contact-form-section {
   padding: 3rem;
   background-color: #fafafa;
@@ -1038,7 +1003,6 @@ nav a{
   transform: scale(0.98);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .contact-content-grid {
     grid-template-columns: 1fr;
@@ -1063,11 +1027,10 @@ nav a{
   color: #1a1a1a;
 }
 
-/* Hero Section */
 .about-hero {
   text-align: center;
   padding: 4rem 2rem;
-  background-color: #004d40; /* Dark green theme */
+  background-color: #004d40;
   color: white;
   border-radius: 15px;
   margin-bottom: 4rem;
@@ -1088,7 +1051,6 @@ nav a{
   color: #e0f2f1;
 }
 
-/* Story Section */
 .about-story-section {
   background-color: #f8fcfc;
   padding: 4rem;
@@ -1117,7 +1079,6 @@ nav a{
   margin-bottom: 1.5rem;
 }
 
-/* Team Section */
 .team-section {
   text-align: center;
 }
@@ -1190,7 +1151,6 @@ nav a{
   margin: 0;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .about-story-section {
     padding: 2rem;
@@ -1203,18 +1163,16 @@ nav a{
 
 
 /* Sign in starts */
-/* Container to center the card on the page */
 .sign-page-container {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 80vh;
   padding: 2rem 5%;
-  background-color: #f4f9f9; /* Very light subtle background */
+  background-color: #f4f9f9;
   font-family: sans-serif;
 }
 
-/* The Main Card */
 .auth-card {
   display: flex;
   background-color: white;
@@ -1226,10 +1184,9 @@ nav a{
   min-height: 500px;
 }
 
-/* Left Side: Branding Panel */
 .auth-branding {
   flex: 1;
-  background-color: #004d40; /* Future Marg Dark Green */
+  background-color: #004d40;
   color: white;
   padding: 4rem 3rem;
   display: flex;
@@ -1242,7 +1199,7 @@ nav a{
   font-size: 2.5rem;
   margin-top: 0;
   margin-bottom: 1.5rem;
-  color: #b2ebf2; /* Light teal accent */
+  color: #b2ebf2;
 }
 
 .auth-branding p {
@@ -1269,7 +1226,6 @@ nav a{
   color: #004d40;
 }
 
-/* Right Side: Form Panel */
 .auth-form-section {
   flex: 1.2;
   padding: 4rem 3rem;
@@ -1292,7 +1248,6 @@ nav a{
   gap: 1.5rem;
 }
 
-/* Input Styling */
 .input-group {
   display: flex;
   align-items: center;
@@ -1323,7 +1278,6 @@ nav a{
   color: #333;
 }
 
-/* Forgot Password Link */
 .forgot-password {
   text-align: right;
   margin-top: -10px;
@@ -1340,7 +1294,6 @@ nav a{
   text-decoration: underline;
 }
 
-/* Primary Action Button */
 .auth-submit-btn {
   background-color: #004d40;
   color: white;
@@ -1362,7 +1315,6 @@ nav a{
   transform: scale(0.98);
 }
 
-/* Responsive Design for Mobile Devices */
 @media (max-width: 768px) {
   .auth-card {
     flex-direction: column;
@@ -1378,7 +1330,7 @@ nav a{
     padding: 3rem 2rem;
   }
 }
-/* --- Google Auth Button --- */
+
 .google-auth-btn {
   display: flex;
   align-items: center;
@@ -1402,12 +1354,11 @@ nav a{
 }
 
 .google-icon {
-  color: #DB4437; /* Standard Google Red */
+  color: #DB4437;
   font-size: 1.2rem;
   margin-right: 10px;
 }
 
-/* --- OR Divider --- */
 .auth-divider {
   display: flex;
   align-items: center;
@@ -1431,7 +1382,6 @@ nav a{
 
 
 /* Nav Starts */
-/* User Profile Button Styles */
 .user-profile-container {
   position: relative; 
 }
@@ -1465,7 +1415,6 @@ nav a{
   color: #555;
 }
 
-/* Dropdown Menu Styles */
 .profile-dropdown {
   position: absolute;
   top: 130%; 
@@ -1510,10 +1459,10 @@ nav a{
 
 /* Footer starts */
 .footer-container {
-  background-color: #162421; /* Deep, dark green/charcoal */
+  background-color: #162421;
   color: #e0f2f1;
-  padding: 2rem 1rem 0; /* Plenty of space at the top */
-  margin-top: 4rem; /* Pushes it down from your main content */
+  padding: 2rem 1rem 0;
+  margin-top: 4rem;
   font-family: inherit;
 }
 
@@ -1527,7 +1476,6 @@ nav a{
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Brand Section */
 .footer-logo {
   font-size: 2rem;
   color: #ffffff;
@@ -1559,7 +1507,6 @@ nav a{
   transform: translateY(-2px);
 }
 
-/* Headings */
 .footer-section h3 {
   color: #ffffff;
   font-size: 1.1rem;
@@ -1575,10 +1522,9 @@ nav a{
   bottom: 0;
   width: 40px;
   height: 2px;
-  background-color: #4db6ac; /* Accent green */
+  background-color: #4db6ac;
 }
 
-/* Lists */
 .footer-section ul {
   list-style: none;
   padding: 0;
@@ -1611,7 +1557,6 @@ nav a{
   color: #4db6ac;
 }
 
-/* Bottom Bar */
 .footer-bottom {
   text-align: center;
   padding: 1rem 0;
@@ -1619,7 +1564,6 @@ nav a{
   color: #80cbc4;
 }
 
-/* Responsive Design for smaller screens */
 @media (max-width: 768px) {
   .footer-content {
     grid-template-columns: 1fr;

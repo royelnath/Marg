@@ -1,11 +1,9 @@
 import { useParams, Link } from 'react-router-dom';
-// import './App.css';
 
 export default function CareerDetails() {
-  // useParams extracts the 'careerId' from the URL (e.g., 'data-scientist')
+
   const { careerId } = useParams();
 
-  // Mock Database: In the future, you will fetch this from your Node/Express backend
   const careerData = {
     'data-scientist': {
       title: 'Data Scientist',
@@ -72,17 +70,15 @@ export default function CareerDetails() {
     },
     'civil-services': {
       title: 'Civil Services',
-      stream: 'Arts', // Or general, depending on how you categorize it
+      stream: 'Arts',
       description: 'Civil servants work in various government departments to administer policies and ensure the smooth running of public services.',
       skills: ['Public Administration', 'Leadership', 'Policy Analysis', 'General Knowledge', 'Ethics'],
       outlook: 'Highly prestigious and stable, offering significant societal impact.'
     },
   };
 
-  // Find the specific career based on the URL parameter
   const career = careerData[careerId];
 
-  // If someone types a random career URL that doesn't exist
   if (!career) {
     return (
       <div className="career-not-found">
@@ -96,18 +92,15 @@ export default function CareerDetails() {
   return (
     <div className="career-details-container">
       
-      {/* Navigation Breadcrumb */}
       <div className="breadcrumb">
         <Link to="/career" className="back-link">← Back to Careers</Link>
       </div>
 
-      {/* Main Header Area */}
       <div className="career-header">
         <span className={`stream-badge ${career.stream.toLowerCase()}`}>{career.stream}</span>
         <h1>{career.title}</h1>
       </div>
 
-      {/* Content Area */}
       <div className="career-content-grid">
         
         <div className="main-info">

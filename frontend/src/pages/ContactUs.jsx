@@ -16,16 +16,14 @@ export default function ContactUs() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // For now, we just log it. Later, this will be an API call to your backend.
     console.log('Form submitted:', formData);
     alert('Thank you for reaching out! We will get back to you shortly.');
-    setFormData({ name: '', email: '', subject: '', message: '' }); // Reset form
+    setFormData({ name: '', email: '', subject: '', message: '' });
   };
 
   return (
     <div className="contact-page-container">
       
-      {/* Header */}
       <div className="contact-header">
         <h1>Get in Touch</h1>
         <p>Have questions about your career trajectory or our counseling services? We are here to help.</p>
@@ -33,7 +31,6 @@ export default function ContactUs() {
 
       <div className="contact-content-grid">
         
-        {/* Contact Information Side */}
         <div className="contact-info-section">
           <h2>Contact Information</h2>
           <p>Fill out the form and our team will get back to you within 24 hours.</p>
@@ -63,7 +60,6 @@ export default function ContactUs() {
           </div>
         </div>
 
-        {/* Contact Form Side */}
         <div className="contact-form-section">
           <form onSubmit={handleSubmit} className="contact-form">
             <div className="form-group">

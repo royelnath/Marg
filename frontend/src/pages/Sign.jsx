@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom'; // To redirect after login
+import { useNavigate, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faLock, faUser } from '@fortawesome/free-solid-svg-icons';
 import { faGoogle } from '@fortawesome/free-brands-svg-icons';
@@ -27,9 +27,6 @@ export default function Sign() {
     e.preventDefault();
     
     if (isLogin) {
-      // ==========================
-      // SIGN IN LOGIC
-      // ==========================
       try {
         const response = await fetch('http://localhost:5000/api/auth/login', {
           method: 'POST',
@@ -43,12 +40,11 @@ export default function Sign() {
         const data = await response.json();
 
         if (response.ok) {
-          // Save the token to local storage so the user stays logged in
           localStorage.setItem('userToken', data.token);
           localStorage.setItem('userName', data.name);
           
           alert(`Welcome back, ${data.name}!`);
-          navigate('/'); // Redirect to the Home page after successful login
+          navigate('/');
         } else {
           alert("Login Failed: " + data.message);
         }
@@ -57,9 +53,6 @@ export default function Sign() {
       }
 
     } else {
-      // ==========================
-      // SIGN UP LOGIC
-      // ==========================
       if (formData.password !== formData.confirmPassword) {
         alert("Passwords do not match!");
         return;
@@ -80,7 +73,7 @@ export default function Sign() {
 
         if (response.ok) {
           alert("Registration Successful! Please sign in.");
-          setIsLogin(true); // Flip back to the login screen
+          setIsLogin(true);
           setFormData({ name: '', email: '', password: '', confirmPassword: '' });
         } else {
           alert("Registration Failed: " + data.message);
@@ -94,10 +87,9 @@ export default function Sign() {
   const handleGoogleSignIn = async () => {
     try {
       const provider = new GoogleAuthProvider();
-      // This pops up the Google login window
+
       const result = await signInWithPopup(auth, provider);
       
-      // Send the Google user data to our MongoDB backend
       const response = await fetch('http://localhost:5000/api/auth/google', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -110,7 +102,6 @@ export default function Sign() {
       const data = await response.json();
 
       if (response.ok) {
-        // Log them in using our custom JWT system just like normal!
         localStorage.setItem('userToken', data.token);
         localStorage.setItem('userName', data.name);
         alert(`Welcome, ${data.name}!`);
@@ -145,7 +136,7 @@ export default function Sign() {
             className="toggle-mode-btn" 
             onClick={() => {
               setIsLogin(!isLogin);
-              setFormData({ name: '', email: '', password: '', confirmPassword: '' }); // Clear form on switch
+              setFormData({ name: '', email: '', password: '', confirmPassword: '' });
             }}
           >
             {isLogin ? "Create an Account" : "I already have an account"}

@@ -4,10 +4,8 @@ import { Link } from 'react-router-dom';
 export default function Blog() {
   const [activeCategory, setActiveCategory] = useState('All');
 
-  // Categories for the filter bar
   const categories = ['All', 'Technology', 'Career Prep', 'Industry Trends', 'Success Stories'];
 
-  // Mock Blog Database
   const blogPosts = [
     {
       id: 1,
@@ -47,7 +45,6 @@ export default function Blog() {
     }
   ];
 
-  // Filter logic
   const filteredPosts = activeCategory === 'All' 
     ? blogPosts 
     : blogPosts.filter(post => post.category === activeCategory);
@@ -55,13 +52,11 @@ export default function Blog() {
   return (
     <div className="blog-page-container">
       
-      {/* Blog Header */}
       <div className="blog-header">
         <h1>Insights & Guidance</h1>
         <p>Expert advice, industry trends, and actionable strategies to accelerate your career trajectory.</p>
       </div>
 
-      {/* Category Filter */}
       <div className="blog-filters">
         {categories.map(category => (
           <button 
@@ -74,7 +69,6 @@ export default function Blog() {
         ))}
       </div>
 
-      {/* Featured Post (Only show if 'All' is selected) */}
       {activeCategory === 'All' && (
         <div className="featured-post">
           <img src={blogPosts[0].image} alt={blogPosts[0].title} className="featured-image" />
@@ -90,10 +84,8 @@ export default function Blog() {
         </div>
       )}
 
-      {/* Blog Grid */}
       <div className="blog-grid">
         {filteredPosts.map((post, index) => {
-          // Skip the first post in the 'All' view because it's already featured above
           if (activeCategory === 'All' && index === 0) return null;
 
           return (

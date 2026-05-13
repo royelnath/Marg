@@ -8,7 +8,6 @@ export default function Footer() {
     <footer className="footer-container">
       <div className="footer-content">
         
-        {/* Brand Section */}
         <div className="footer-section brand-section">
           <h2 className="footer-logo">Marg.</h2>
           <p className="footer-tagline">
@@ -22,7 +21,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Quick Links Section */}
+        
         <div className="footer-section links-section">
           <h3>Quick Links</h3>
           <ul>
@@ -33,7 +32,7 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Contact Section */}
+        
         <div className="footer-section contact-section">
           <h3>Get in Touch</h3>
           <ul>
