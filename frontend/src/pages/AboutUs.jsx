@@ -65,7 +65,7 @@ export default function AboutUs() {
 
       <div className="team-section">
         <h2>Meet the Visionaries</h2>
-        <p className="team-subtitle">The engineering team behind Future Marg.</p>
+        <p className="team-subtitle">The engineering team behind Marg.</p>
         
         <div className="team-grid">
           {teamMembers.map((member) => (

@@ -125,7 +125,7 @@ export default function Sign() {
               {redirectMessage}
             </div>
           )}
-          <h2>{isLogin ? 'Welcome Back!' : 'Join Future Marg'}</h2>
+          <h2>{isLogin ? 'Welcome Back!' : 'Join Marg'}</h2>
           <p>
             {isLogin 
               ? 'Sign in to continue mapping your unique career trajectory and accessing your personalized dashboard.'
