@@ -1,16 +1,13 @@
 const User = require('../models/User');
 const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken'); // We need this to keep users logged in!
+const jwt = require('jsonwebtoken');
 
-// Helper function to generate a secure token
 const generateToken = (id) => {
   return jwt.sign({ id }, process.env.JWT_SECRET, {
-    expiresIn: '30d', // User stays logged in for 30 days
+    expiresIn: '30d',
   });
 };
 
-// @desc    Register a new user
-// @route   POST /api/auth/register
 const registerUser = async (req, res) => {
   try {
     const { name, email, password } = req.body;
@@ -34,7 +31,7 @@ const registerUser = async (req, res) => {
         _id: user.id,
         name: user.name,
         email: user.email,
-        token: generateToken(user._id), // Send token to frontend
+        token: generateToken(user._id),
         message: "Registration successful!"
       });
     } else {
@@ -45,8 +42,7 @@ const registerUser = async (req, res) => {
   }
 };
 
-// @desc    Authenticate a user (Login)
-// @route   POST /api/auth/login
+
 const loginUser = async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -60,7 +56,7 @@ const loginUser = async (req, res) => {
         _id: user.id,
         name: user.name,
         email: user.email,
-        token: generateToken(user._id), // Send token to keep them logged in
+        token: generateToken(user._id),
         message: "Login successful!"
       });
     } else {
@@ -71,19 +67,14 @@ const loginUser = async (req, res) => {
   }
 };
 
-// Make sure BOTH functions are exported here at the bottom!
-// @desc    Authenticate with Google
-// @route   POST /api/auth/google
+
 const googleAuth = async (req, res) => {
   try {
     const { name, email } = req.body;
 
-    // 1. Check if this user already exists in our MongoDB
     let user = await User.findOne({ email });
 
-    // 2. If they don't exist, create a new account for them instantly
     if (!user) {
-      // Create a random, highly secure password since they use Google to log in
       const generatedPassword = Math.random().toString(36).slice(-8) + Math.random().toString(36).slice(-8);
       const salt = await bcrypt.genSalt(10);
       const hashedPassword = await bcrypt.hash(generatedPassword, salt);
@@ -95,7 +86,6 @@ const googleAuth = async (req, res) => {
       });
     }
 
-    // 3. Send back the standard JWT token so the Navbar works
     res.json({
       _id: user.id,
       name: user.name,
