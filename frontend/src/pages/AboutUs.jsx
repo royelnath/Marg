@@ -30,15 +30,15 @@ export default function AboutUs() {
     {
       id: 4,
       name: "Manash Pratim Borah",
-      role: "Idea Partner",
-      bio: "providing design and logical Ideas.",
+      role: "Project Presenter",
+      bio: "Guiding the audience through the project's features and workflow.",
       image: Manash
     },
     {
       id: 5,
       name: "Nabajyoti Bhuyan",
-      role: "Presentation/Pitch",
-      bio: "Handling Presentations and Pitching.",
+      role: "Pitch Strategist",
+      bio: "Handling the formal pitch and Q&A sessions.",
       image: Nabajyoti
     }
   ];
