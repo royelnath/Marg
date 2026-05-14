@@ -27,7 +27,7 @@ export default function Navbar() {
 
   return (
     <nav>
-      <div className='logo'>Marg.</div>
+      <div className='logo'><Link to='/'>Marg.</Link></div>
       
       <div className='divert'>
         <Link to='/'>Home</Link>

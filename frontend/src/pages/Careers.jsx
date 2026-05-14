@@ -7,13 +7,25 @@ export default function Careers() {
   const [searchTerm, setSearchTerm] = useState('');
 
   const careerTabs = [
+    { id: 'journalist', name: 'Journalist' },
+    { id: 'civil-services', name: 'Civil Services' },
+    { id: 'research-scientist', name: 'Research Scientist' },
     { id: 'data-scientist', name: 'Data Scientist' },
-    { id: 'aerospace-engineer', name: 'Aerospace Engineer' },
+    { id: 'bank-clerk', name: 'Bank PO/Clerk' },
     { id: 'psychologist', name: 'Psychologist' },
+    { id: 'normal-teacher', name: 'Teacher' },
+    { id: 'university-science-professor', name: 'University Professor (Science & Engineering)' },
+    { id: 'medical-professor', name: 'Medical Professor & Clinical Educator' },
+    { id: 'university-arts-professor', name: 'University Professor (Arts & Humanities)' },
+    { id: 'university-commerce-professor', name: 'University Professor (Business & Commerce)' },
+    { id: 'aerospace-engineer', name: 'Aerospace Engineer' },
+    { id: 'chartered-accountant', name: 'CA (Chartered Accountant)' },
+    { id: 'sales-executive', name: 'Sales Executive' },
     { id: 'corporate-lawyer', name: 'Corporate Lawyer' },
     { id: 'investment-banker', name: 'Investment Banker' },
     { id: 'business-analyst', name: 'Business Analyst' },
     { id: 'software-engineer', name: 'Software Engineer' },
+    { id: 'medical-professional', name: 'Doctor' },
     { id: 'brand-strategist', name: 'Brand Strategist' },
   ];
 
@@ -68,7 +80,7 @@ export default function Careers() {
             Dive into the mechanics of the future. From writing the algorithms that power modern technology to engineering sustainable solutions and advancing human health. This is the path for logical thinkers and relentless problem solvers.
           </p>
           <p className="excar">
-            <i>Career Trajectories:</i> Data Scientist, Aerospace Engineer, Medical Professional
+            <i>Career Trajectories:</i> Data Scientist, Aerospace Engineer, Medical Professional...
           </p>
         </Link>
 
@@ -79,7 +91,7 @@ export default function Careers() {
             Shape how the world thinks, feels, and interacts. Combine creative vision with a deep understanding of human behavior to solve complex problems through human-centric design, media, and social policy.
           </p>
           <p className="excar">
-            <i>Career Trajectories:</i> Psychologist, Corporate Lawyer, Brand Strategist
+            <i>Career Trajectories:</i> Psychologist, Corporate Lawyer, Brand Strategist...
           </p>
         </Link>
 
@@ -90,7 +102,7 @@ export default function Careers() {
             Master the language of global business. Learn to analyze market trends, manage capital, and drive the strategic growth behind the world's most successful enterprises and disruptive startups.
           </p>
           <p className="excar">
-            <i>Career Trajectories:</i> Investment Banker, Financial Technologist (FinTech), Business Analyst, Chartered Accountant.
+            <i>Career Trajectories:</i> Investment Banker, Financial Technologist (FinTech), Business Analyst, Chartered Accountant...
           </p>
         </Link>
       </div>

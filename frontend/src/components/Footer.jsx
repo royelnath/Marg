@@ -38,11 +38,11 @@ export default function Footer() {
           <ul>
             <li>
               <FontAwesomeIcon icon={faEnvelope} className="contact-icon" />
-              <a href="mailto:support@marg.com">support@marg.com</a>
+              <a href="mailto:marg.supports@gmail.com">marg.supports@gmail.com</a>
             </li>
             <li>
               <FontAwesomeIcon icon={faPhone} className="contact-icon" />
-              <span>+91 98765 43210</span>
+              <span>+91 93945 17371</span>
             </li>
             <li>
               <FontAwesomeIcon icon={faLocationDot} className="contact-icon" />

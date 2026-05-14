@@ -36,7 +36,7 @@ export default function Home() {
             </Link>
           </span>
           <span>
-            <Link to="/career/data-scientist">
+            <Link to="/career/research-scientist">
               <img src={scientist} alt="Scientist" width="50px" /> Scientist
             </Link>
           </span>

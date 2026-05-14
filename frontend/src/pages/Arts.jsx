@@ -4,7 +4,10 @@ export default function Arts() {
   const artsCareers = [
     { id: 'psychologist', title: 'Psychologist', desc: 'Study the human mind and behavior to help individuals navigate mental health and emotional challenges.' },
     { id: 'corporate-lawyer', title: 'Corporate Lawyer', desc: 'Navigate complex legal frameworks to advise businesses on transactions, mergers, and corporate governance.' },
-    { id: 'brand-strategist', title: 'Brand Strategist', desc: 'Shape the identity and public perception of companies through creative vision and market research.' }
+    { id: 'university-arts-professor', title: 'University Professor (Arts & Humanities)', desc: 'Shaping public discourse and cultural understanding through critical analysis, archival research, and academic publishing.' },
+    { id: 'brand-strategist', title: 'Brand Strategist', desc: 'Shape the identity and public perception of companies through creative vision and market research.' },
+    { id: 'journalist', title: 'Journalist', desc: 'Journalists collect, verify, and present news through newspapers, TV, radio, and digital media.' },
+    { id: 'civil-services', title: 'Civil Services', desc: 'Civil servants work in various government departments to administer policies and ensure the smooth running of public services.' }
   ];
 
   return (

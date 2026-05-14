@@ -39,7 +39,7 @@ export default function ContactUs() {
             <FontAwesomeIcon icon={faPhone} className="contact-icon" />
             <div>
               <h3>Phone</h3>
-              <p>+91 98765 43210</p>
+              <p>+91 93945 17371</p>
             </div>
           </div>
 
@@ -47,7 +47,7 @@ export default function ContactUs() {
             <FontAwesomeIcon icon={faEnvelope} className="contact-icon" />
             <div>
               <h3>Email</h3>
-              <p>support@marg.com</p>
+              <p>marg.supports@gmail.com</p>
             </div>
           </div>
 
@@ -71,7 +71,7 @@ export default function ContactUs() {
                 value={formData.name} 
                 onChange={handleChange} 
                 required 
-                placeholder="Suraj Saikia"
+                placeholder="Narendra Modi"
               />
             </div>
 
@@ -84,7 +84,7 @@ export default function ContactUs() {
                 value={formData.email} 
                 onChange={handleChange} 
                 required 
-                placeholder="manjit@gmail.com"
+                placeholder="support@gmail.com"
               />
             </div>
 
