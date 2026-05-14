@@ -22,16 +22,23 @@ export default function CareerDetails() {
     'aerospace-engineer': {
       title: 'Aerospace Engineer',
       stream: 'Science',
-      description: 'Aerospace Engineers design primarily aircraft, spacecraft, satellites, and missiles. In addition, they test prototypes to make sure that they function according to design.',
+      description: 'Aerospace engineering is a highly specialized and advanced field focused on the design, development, testing, and production of aircraft, spacecraft, and related systems. It is broadly divided into two overlapping branches: aeronautical engineering, which deals with vehicles operating within Earth\'s atmosphere (like commercial jets, drones, and helicopters), and astronautical engineering, which focuses on craft operating outside it (such as satellites, rockets, and space stations). This discipline demands a rigorous mastery of aerodynamics, propulsion, thermodynamics, and materials science to ensure that vehicles can safely withstand extreme physical conditions, from high-velocity atmospheric friction to the vacuum of space. Ultimately, aerospace engineers are the innovators who push the boundaries of human flight, enabling global connectivity and deep space exploration.',
       skills: ['Thermodynamics', 'Aerodynamics', 'AutoCAD', 'Propulsion', 'Mathematics'],
       outlook: 'Steady growth with opportunities in defense, space exploration (like ISRO/NASA), and commercial aviation.'
+    },
+    'engineer': {
+      title: 'Engineer',
+      stream: 'Science',
+      description: 'An engineering degree is a rigorous undergraduate program designed to equip students with the mathematical, scientific, and technical foundation needed to solve complex real-world problems. The two most common pathways, the Bachelor of Technology (B.Tech) and the Bachelor of Engineering (B.E.), are largely similar in scope and career prospects but differ slightly in their academic approach. B.E. programs typically lean towards a knowledge-based, theoretical foundation of engineering concepts, whereas B.Tech programs are generally more skill-oriented, emphasizing practical applications and modern technological tools. Despite these minor curricular differences, both are traditionally four-year degrees that hold equal academic value and open doors to diverse fields like computer science, civil, mechanical, and electrical engineering.',
+      skills: ['Systems Thinking', 'Troubleshooting', 'Mathematics', 'Iterative Design', 'Basic Programming', 'Software Proficiency', 'Technical Communication', 'Ethical Judgment'],
+      outlook: 'The engineering landscape is currently defined by rapid technological integration. While traditional infrastructure and manufacturing provide stable, long-term career security, the fastest growth and highest compensation remain in software, cloud architecture, and data science. Additionally, the industry is seeing greater geographical flexibility; the rise of remote development roles and expanding regional tech hubs (such as Guwahati) means high-paying tech jobs are no longer strictly confined to Tier-1 megacities.'
     },
     'psychologist': {
       title: 'Psychologist',
       stream: 'Arts',
-      description: 'Psychologists study cognitive, emotional, and social processes and behavior by observing, interpreting, and recording how individuals relate to one another and to their environments.',
+      description: 'A psychologist is a mental health professional who studies human behavior, cognitive processes, and emotions to help individuals navigate psychological challenges and improve their overall well-being. Unlike psychiatrists, who are medical doctors that can prescribe medication, psychologists primarily rely on psychotherapy, behavioral interventions, and specialized testing to treat various mental health conditions. The profession encompasses a wide range of specializations—from clinical psychology, which focuses on treating severe disorders, to industrial-organizational psychology, which aims to optimize workplace dynamics and employee wellness. In India, becoming a practicing clinical psychologist requires rigorous academic training, typically an M.Phil or Ph.D., along with official registration with the Rehabilitation Council of India (RCI), ensuring that patients receive scientifically grounded and empathetic care.',
       skills: ['Empathy', 'Research', 'Communication', 'Analytical Thinking', 'Patience'],
-      outlook: 'Growing rapidly as mental health awareness increases globally and in corporate sectors.'
+      outlook: 'The demand for psychologists in India is seeing a significant upward trend in 2026, driven by a massive shift in cultural attitudes toward mental health and the expansion of corporate wellness programs.There is a growing need for mental health professionals in hospitals, educational institutions, and the private sector. The "wellness tech" industry is also booming, creating new roles for psychologists in app development and remote counseling.'
     },
     'normal-teacher': {
       title: 'Teacher',
@@ -64,11 +71,7 @@ export default function CareerDetails() {
     'university-commerce-professor': {
       title: 'University Professor (Business & Commerce)',
       stream: 'Commerce',
-      description: [
-        'University Professors in Commerce, Management, and Business (often teaching in BBA, MBA, or M.Com programs) focus on advanced economic theories, corporate strategy, and global financial markets.',
-        'Their teaching methodology relies heavily on the "Case Study" approach, analyzing real-world corporate successes and failures to teach students high-level decision-making. Beyond the classroom, these professors frequently act as consultants for multinational corporations or government economic advisory boards.',
-        'Their research often involves analyzing market trends, consumer behavior, and organizational psychology. By blending academic theory with current industry realities, they prepare students to become CEOs, investment bankers, and senior financial analysts.'
-      ],
+      description: 'University Professors in Commerce, Management, and Business (often teaching in BBA, MBA, or M.Com programs) focus on advanced economic theories, corporate strategy, and global financial markets. Their teaching methodology relies heavily on the "Case Study" approach, analyzing real-world corporate successes and failures to teach students high-level decision-making. Beyond the classroom, these professors frequently act as consultants for multinational corporations or government economic advisory boards. Their research often involves analyzing market trends, consumer behavior, and organizational psychology. By blending academic theory with current industry realities, they prepare students to become CEOs, investment bankers, and senior financial analysts.',
       skills: ['Advanced Economic Modeling', 'Case-Study Methodology', 'Industry & Corporate Consulting', 'Strategic Financial Analysis', 'Business Journal Publishing', 'Leadership Development'],
       outlook: 'Excellent prospects, especially in top-tier business schools (like IIMs) and private universities. A Ph.D. is standard, though significant high-level corporate experience (like being a former CEO) is also highly valued.'
     },
@@ -103,28 +106,28 @@ export default function CareerDetails() {
     'investment-banker': {
       title: 'Investment Banker',
       stream: 'Commerce',
-      description: 'Investment bankers help companies, organizations, and even governments raise money by issuing and selling securities. They also provide strategic advice for mergers and acquisitions.',
+      description: 'An investment banker is a specialized financial professional who helps corporations, governments, and large institutions raise capital and navigate complex financial transactions. Rather than dealing with everyday consumer banking, they act as strategic advisors and intermediaries in high-stakes deals, such as managing initial public offerings (IPOs), issuing corporate bonds, and orchestrating mergers and acquisitions (M&A). The role demands rigorous financial modeling, deep market analysis, and exceptional negotiation skills to determine the accurate valuation of companies and structure lucrative, legally compliant deals. Often characterized by a fast-paced and high-pressure environment, investment banking serves as a critical engine of the global economy, connecting entities that need funding to grow with investors looking to allocate their capital efficiently.',
       skills: ['Financial Modeling', 'Valuation', 'Excel', 'Networking', 'High-Pressure Management'],
       outlook: 'Known for long hours but offers some of the highest financial compensations in the market.'
     },
     'business-analyst': {
       title: 'Business Analyst',
       stream: 'Commerce',
-      description: 'Business Analysts help businesses optimize, automate, and analyze their processes. They bridge the gap between IT and the business to improve efficiency.',
+      description: 'A Business Analyst (BA) acts as the crucial bridge between a company\'s strategic objectives and its technological capabilities. Their primary role involves analyzing organizational data, evaluating current business processes, and identifying areas for structural improvement, cost reduction, or increased efficiency. By gathering detailed requirements from stakeholders and utilizing tools like SQL, advanced Excel, and various Business Intelligence (BI) platforms, they translate complex business problems into actionable, data-driven solutions. Ultimately, business analysts empower organizations to make informed decisions, ensuring that new technologies, software implementations, and operational changes directly align with the company\'s broader financial and growth goals.',
       skills: ['Data Analysis', 'Process Mapping', 'SQL', 'Tableau/PowerBI', 'Problem Solving'],
       outlook: 'Excellent. Every tech and non-tech company requires BAs to streamline operations.'
     },
     'software-engineer': {
       title: 'Software Engineer',
       stream: 'Science',
-      description: 'Software Engineers apply the principles of software engineering to the design, development, maintenance, testing, and evaluation of computer software.',
+      description: 'A software engineer is a technical professional who applies the principles of computer science, engineering, and mathematical analysis to design, develop, test, and maintain software systems. Rather than simply writing code, they architect scalable, efficient solutions to solve complex problems, working across diverse domains such as web applications, mobile platforms, operating systems, and enterprise networks. The role demands a rigorous understanding of programming languages, data structures, algorithms, and system architecture, alongside the ability to collaborate effectively with designers, product managers, and other stakeholders. Ultimately, software engineers are the builders of the modern digital infrastructure, creating the secure and reliable technologies that power businesses, communication, and everyday life.',
       skills: ['Data Structures', 'Algorithms', 'MERN Stack', 'Java/C++', 'System Design'],
       outlook: 'Exponential growth. The backbone of the modern digital economy.'
     },
     'brand-strategist': {
       title: 'Brand Strategist',
       stream: 'Arts',
-      description: 'Brand Strategists develop positioning recommendations, guide market research analysis, and define brand elements and tone to ensure consistent communication across all channels.',
+      description: 'A brand strategist is a marketing professional responsible for shaping and managing how a company, product, or service is perceived by the public. Acting as the architect behind a brand\'s identity, they conduct deep market research and analyze consumer behavior to define a brand\'s unique voice, core values, and market positioning. Rather than just designing logos or writing catchy slogans, they develop the long-term, overarching blueprint that ensures every piece of communication—from visual aesthetics to marketing campaigns—aligns seamlessly with the organization\'s broader business objectives. Ultimately, their goal is to build strong, enduring emotional connections with the target audience, differentiating the brand from its competitors and driving long-term customer loyalty and growth.',
       skills: ['Market Research', 'Copywriting', 'Consumer Psychology', 'Creative Direction', 'SEO'],
       outlook: 'Strong demand in marketing agencies and tech startups looking to establish a unique identity.'
     },
@@ -148,6 +151,34 @@ export default function CareerDetails() {
       description: 'Research Scientists are the pioneers of human knowledge. They dedicate their careers to answering the fundamental questions of how the universe works, from the microscopic behavior of quantum particles to the macroscopic mapping of distant galaxies. They operate at the cutting edge of fields like biotechnology, astrophysics, environmental science, and artificial intelligence. A scientist’s daily work is driven by the Scientific Method. They spend their time formulating complex hypotheses, designing rigorous experiments, and utilizing highly advanced laboratory equipment or supercomputers to gather data. After experimentation, they rigorously analyze their findings to draw evidence-based conclusions, often writing detailed papers to publish their discoveries in peer-reviewed scientific journals. While many scientists work in academic settings like universities, a massive number are employed by the private sector and government agencies (like NASA or the WHO). Whether they are developing life-saving vaccines, engineering renewable energy solutions, or programming next-generation AI, their work directly shapes the future trajectory of humanity.',
       skills: ['Data Analysis & Statistics', 'Hypothesis Testing', 'Advanced Mathematics', 'Technical Writing & Publishing', 'Perseverance & Patience', 'Specialized Laboratory Techniques'],
       outlook: 'Highly specialized with strong demand in private sectors (pharmaceuticals, tech, green energy) and government research. Usually requires a Master’s degree or a Ph.D.'
+    },
+    'army-officer': {
+      title: 'Army Officer',
+      stream: 'Science',
+      description: 'Army Officers lead soldiers and protect the country from external and internal threats. They manage military operations, training, security missions, and disaster relief activities. This profession requires leadership, discipline, courage, physical fitness, and quick decision-making ability while serving the nation in challenging and high-responsibility environments.',
+      skills: ['Leadership Skills', 'Physical Fitness', 'Discipline', 'Decision Making', 'Team Management', 'Courage'],
+      outlook: 'Defence services offer secure government careers, promotions, allowances, pensions, and strong long-term growth opportunities.'
+    },
+    'air-force-officer': {
+      title: 'Air Force Officer',
+      stream: 'Science',
+      description: 'Air Force Officers protect the nation’s airspace and operate advanced aircraft, defense systems, and aviation technologies. They perform missions related to national security, surveillance, rescue operations, and air combat. This profession requires technical knowledge, concentration, confidence, discipline, and the ability to work under pressure.',
+      skills: ['Technical Knowledge', 'Concentration', 'Physical Fitness', 'Leadership Skills', 'Decision Making', 'Communication Skills'],
+      outlook: 'Air Force careers provide excellent salary, government benefits, promotions, and opportunities in aviation and defense sectors.'
+    },
+    'navy-officer': {
+      title: 'Navy Officer',
+      stream: 'Science',
+      description: 'Navy Officers protect the country’s maritime borders and manage operations on warships, submarines, and naval bases. They handle navigation, security missions, rescue operations, and technical systems at sea. This profession requires discipline, teamwork, leadership, physical endurance, and strong understanding of naval operations and technology.',
+      skills: ['Leadership Skills', 'Teamwork', 'Physical Endurance', 'Technical Knowledge', 'Discipline', 'Problem Solving'],
+      outlook: 'Navy careers offer stable government employment, attractive salary, allowances, and career advancement opportunities in defense services.'
+    },
+    'defence-scientist': {
+      title: 'Defence Scientist (DRDO)',
+      stream: 'Science',
+      description: 'Defence Scientists research and develop advanced weapons, communication systems, missiles, and military technologies for national security. They work in laboratories and research organizations to improve defense systems and innovations. This profession requires scientific knowledge, analytical thinking, research ability, creativity, and strong technical problem-solving skills.',
+      skills: ['Research Skills', 'Technical Knowledge', 'Analytical Thinking', 'Problem Solving', 'Creativity', 'Scientific Knowledge'],
+      outlook: 'Defence research offers prestigious government careers with good salary growth, research opportunities, and long-term job stability.'
     },
   };
 

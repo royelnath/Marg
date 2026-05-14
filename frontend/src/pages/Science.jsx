@@ -7,8 +7,13 @@ export default function Science() {
     { id: 'medical-professor', title: 'Medical Professor & Clinical Educator', desc: 'Training the next generation of healthcare professionals through hands-on clinical instruction and advanced medical research.' },
     { id: 'data-scientist', title: 'Data Scientist', desc: 'Extract meaningful insights from vast amounts of data using machine learning and algorithms.' },
     { id: 'research-scientist', title: 'Research Scientist', desc: 'Pioneers of human knowledge, operate at the cutting edge of fields like biotechnology, astrophysics, environmental science, and artificial intelligence.' },
+    { id: 'engineer', title: 'Engineer', desc: 'Mathematical, scientific, and technical foundation needed to solve complex real-world problems.' },
     { id: 'aerospace-engineer', title: 'Aerospace Engineer', desc: 'Design, test, and manufacture aircraft, spacecraft, and missiles.' },
-    { id: 'software-engineer', title: 'Software Engineer', desc: 'Build the applications, systems, and digital infrastructure of the future.' }
+    { id: 'software-engineer', title: 'Software Engineer', desc: 'Build the applications, systems, and digital infrastructure of the future.' },
+    { id: 'army-officer', title: 'Army Officer', desc: 'manage military operations, training, security missions, and disaster relief activities.' },
+    { id: 'air-force-officer', title: 'Air Force Officer', desc: 'Protect the nation’s airspace and operate advanced aircraft, defense systems, and aviation technologies.' },
+    { id: 'navy-officer', title: 'Navy Officer', desc: 'protect the country’s maritime borders and manage operations on warships, submarines, and naval bases.' },
+    { id: 'defence-scientist', title: 'Defence Scientist (DRDO)', desc: 'Research and develop advanced weapons, communication systems, missiles, and military technologies for national security.' }
   ];
 
   return (

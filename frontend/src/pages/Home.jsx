@@ -26,7 +26,7 @@ export default function Home() {
         <div className="options">
           
           <span>
-            <Link to="/career/software-engineer">
+            <Link to="/career/engineer">
               <img src={engineer} alt="Engineer" width="50px" /> Engineer
             </Link>
           </span>
