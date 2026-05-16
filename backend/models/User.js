@@ -1,6 +1,13 @@
 const mongoose = require('mongoose');
 
 const userSchema = new mongoose.Schema({
+  
+  isVerified: { type: Boolean, default: false },
+  otp: { type: String },
+  otpExpires: { type: Date },
+  resetPasswordToken: { type: String },
+  resetPasswordExpires: { type: Date },
+
   name: {
     type: String,
     required: true,

@@ -84,7 +84,7 @@ export default function ContactUs() {
                 value={formData.email} 
                 onChange={handleChange} 
                 required 
-                placeholder="support@gmail.com"
+                placeholder="modi@gmail.com"
               />
             </div>
 
